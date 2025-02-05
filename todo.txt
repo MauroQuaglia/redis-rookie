@@ -1,0 +1,1 @@
+* Provare anche la versione con Docker.
