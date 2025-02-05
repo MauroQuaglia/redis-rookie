@@ -1,0 +1,13 @@
+---
+- name: "Install Redis"
+  apt:
+    update_cache: true
+    name:
+      - "redis-server"
+
+- name: "Enable and restart Redis"
+  service:
+    name: "redis-server"
+    enabled: true
+    state: "restarted"
+...
