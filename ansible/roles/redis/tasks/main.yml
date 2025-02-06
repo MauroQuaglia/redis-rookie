@@ -5,6 +5,14 @@
     name:
       - "redis-server"
 
+- name: "Generate and copy redis.conf file"
+  template:
+    src: "redis.conf.j2"
+    dest: "/etc/redis/redis.conf"
+    owner: "redis"
+    group: "redis"
+    mode: "0640"
+
 - name: "Enable and restart Redis"
   service:
     name: "redis-server"

@@ -1,0 +1,9 @@
+services:
+  redisinsight:
+    image: "redis/redisinsight:latest"
+    volumes:
+      - "redisinsight:/data"
+    ports:
+      - "5540:5540"
+volumes:
+  redisinsight:
