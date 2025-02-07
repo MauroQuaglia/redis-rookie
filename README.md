@@ -1,7 +1,7 @@
 # redis-rookie
 
-Study of Redis
 REDIS = REmote DIctionary Server
+Redis è a thread singolo quindi viene eseguito un solocomando alla volta. Non ci possono essere race condition.
 
 * Doc online: https://redis.io/docs/latest/
 * Download example: https://github.com/redis-essentials/book

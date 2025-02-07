@@ -12,11 +12,6 @@
       autoremove: true
       purge: true
 
-  - name: "Install Utility"
-    apt:
-      name:
-        - "nodejs"
-
   roles:
     - role: "redis"
       redis_bind: "0.0.0.0"
