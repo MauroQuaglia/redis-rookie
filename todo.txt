@@ -1,1 +1,3 @@
-* Provare anche la versione con Docker.
+* Provare un Redis installato con Docker.
+* Guardare la gemma https://github.com/redis/redis-rb
+  * C'è anche supporto per sentinels, pipelines, ecc.
