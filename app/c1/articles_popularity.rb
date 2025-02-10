@@ -1,18 +1,10 @@
-require('redis')
+require_relative('../base.rb')
 
-class ArticlesPopularity
-  def initialize
-    @client = Redis.new(host: '192.168.56.11', port: 6379)
-  end
-
+class ArticlesPopularity < RedisClientBase
   def setup
     @client.set('article:12345:headline', 'Google Wants')
     @client.set('article:10001:headline', 'Millennials age')
     @client.set('article:60056:headline', 'Dark Queen')
-  end
-
-  def close
-    @client.close
   end
 
   def up_vote(id)
