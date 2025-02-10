@@ -1,0 +1,42 @@
+---
+# https://redis.io/docs/latest/operate/oss_and_stack/install/install-redis/install-redis-on-linux/
+- name: "Install required packages"
+  apt:
+    update_cache: true
+    name:
+      - "gnupg"
+
+- name: "Download Redis GPG key"
+  get_url:
+    url: "https://packages.redis.io/gpg"
+    dest: "/tmp/redis.gpg"
+    mode: "0644"
+
+- name: "Convert Redis GPG key"
+  command: "gpg --dearmor -o /usr/share/keyrings/redis-archive-keyring.gpg /tmp/redis.gpg"
+  args:
+    creates: "/usr/share/keyrings/redis-archive-keyring.gpg"
+
+- name: "Set permission to Redis GPG key"
+  file:
+    path: "/usr/share/keyrings/redis-archive-keyring.gpg"
+    mode: "0644"
+
+- name: "Add Redis repository"
+  apt_repository:
+    repo: "deb [signed-by=/usr/share/keyrings/redis-archive-keyring.gpg] https://packages.redis.io/deb {{ ansible_distribution_release }} main"
+    filename: "redis.list"
+    state: "present"
+
+- name: "Delete /tmp GPG key"
+  file:
+    path: "/tmp/redis.gpg"
+    state: "absent"
+
+# apt-cache madison redis-server
+- name: "Install Redis"
+  apt:
+    update_cache: true
+    name:
+      - "redis-server=6:{{ redis_version }}-1rl1~bullseye1"
+...

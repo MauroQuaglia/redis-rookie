@@ -1,13 +1,10 @@
 ---
 - name: "Install Redis"
-  apt:
-    update_cache: true
-    name:
-      - "redis-server"
+  import_tasks: "install.yml"
 
 - name: "Generate and copy redis.conf file"
   template:
-    src: "redis.conf.j2"
+    src: "redis_{{ redis_version }}.conf.j2"
     dest: "/etc/redis/redis.conf"
     owner: "redis"
     group: "redis"

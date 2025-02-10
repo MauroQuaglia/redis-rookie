@@ -4,15 +4,16 @@
   gather_facts: true
   become: true
 
-  pre_tasks:
-  - name: "Update VM"
-    apt:
-      update_cache: true
-      upgrade: true
-      autoremove: true
-      purge: true
+#  pre_tasks:
+#  - name: "Update VM"
+#    apt:
+#      update_cache: true
+#      upgrade: true
+#      autoremove: true
+#      purge: true
 
   roles:
     - role: "redis"
       redis_bind: "0.0.0.0"
+      redis_version: "7.4.1"
 ...

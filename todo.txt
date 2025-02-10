@@ -2,17 +2,3 @@
 * Guardare la gemma https://github.com/redis/redis-rb
   * C'è anche supporto per sentinels, pipelines, ecc.
 * Guardare meglio il file di configurazione di Redis.
-
-
-
-
-Upgrade your Redis database to version 7.4 or above
-Upgrade to Redis 7.4 for enhanced security, better resource utilization, and increased stability for your applications.
-Redis 7.4 also introduces a slew of new features, including field-level expiration commands for hashes and the ability to start reading a stream from the last entry.
-For a quick trial of the features, spin up a free developer database with Redis Cloud that also provides support for the Redis Query Engine, JSON, probabilistic data structures, and Time Series capabilities.
-Is this useful?
-
-
-Set a password
-Protect your database by setting a password and using the AUTH command to authenticate the connection.
-See the documentation to learn more about Redis security.
