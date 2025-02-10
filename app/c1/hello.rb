@@ -1,4 +1,4 @@
-require_relative('../base.rb')
+require_relative('../redis_base.rb')
 
 class Hello < RedisClientBase
   def write(message)
