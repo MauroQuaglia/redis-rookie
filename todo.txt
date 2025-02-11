@@ -4,4 +4,3 @@
 * Guardare meglio il file di configurazione di Redis.
 
 * esempi
-* account

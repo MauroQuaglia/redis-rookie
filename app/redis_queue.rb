@@ -10,7 +10,7 @@ class RedisQueue
   end
 
   def size
-    puts(@client.llen(@name))
+    @client.llen(@name)
   end
 
   def push(data)
@@ -18,7 +18,7 @@ class RedisQueue
   end
 
   def pop
-    puts(@client.rpop(@name))
+    @client.brpop(@name)
     #@client.brpop # Serve per quando la lista è vuota, così riame in attesa... invece di rpop
     # blocking version di rpop
   end
