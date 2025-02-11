@@ -1,6 +1,12 @@
 require_relative('../redis_base.rb')
 
-class ArticlesPopularity < RedisClientBase
+class ArticlesPopularity
+  include RedisClientBase
+
+  def initialize
+    open_connection
+  end
+
   def setup
     @client.set('article:12345:headline', 'Google Wants')
     @client.set('article:10001:headline', 'Millennials age')
@@ -40,4 +46,4 @@ ap.show_results(12345)
 ap.show_results(10001)
 ap.show_results(60056)
 
-ap.close
+ap.close_connection

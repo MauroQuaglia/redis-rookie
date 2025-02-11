@@ -2,3 +2,6 @@
 * Guardare la gemma https://github.com/redis/redis-rb
   * C'è anche supporto per sentinels, pipelines, ecc.
 * Guardare meglio il file di configurazione di Redis.
+
+* esempi
+* account
