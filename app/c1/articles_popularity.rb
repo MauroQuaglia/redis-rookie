@@ -1,12 +1,6 @@
-require_relative('../redis_base.rb')
+require_relative('../redis_client_base.rb')
 
-class ArticlesPopularity
-  include RedisClientBase
-
-  def initialize
-    open_connection
-  end
-
+class ArticlesPopularity < RedisClientBase
   def setup
     @client.set('article:12345:headline', 'Google Wants')
     @client.set('article:10001:headline', 'Millennials age')
