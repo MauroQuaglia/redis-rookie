@@ -1,5 +1,7 @@
 WIP: Devo riprendere da pagina 36 (compresa)
 
+* sembra che se cancello l'immagine di Redis Insight dopo debba rifare la connessione al database
+  * Come se non tenesse il valore dell'environment.
 * Provare un Redis installato con Docker.
 * Guardare la gemma https://github.com/redis/redis-rb
   * C'è anche supporto per sentinels, pipelines, ecc.
