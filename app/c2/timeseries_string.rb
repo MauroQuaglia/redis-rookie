@@ -1,4 +1,4 @@
-require_relative('redis_client_base')
+require_relative('../redis_client_base')
 
 class TimeseriesString < RedisClientBase
 
