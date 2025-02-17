@@ -7,7 +7,6 @@ class Publisher < RedisClientBase
 
   def publish(channel, command)
     @client.publish(channel, command)
-    puts("Published command #{command} on channel #{channel}...")
   end
 end
 
