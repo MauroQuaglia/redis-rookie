@@ -15,3 +15,8 @@ Redis -> DB in memoria
 
 PostgreSQL -> SD su disco
 da 23 a 27 compreso non ci sono
+
+
+Attenzione quindi
+Non è detto che il bitmap sia sempre meglio, per esempio se guardiamoi c6/benchmark nel caso considerato il bitmap usa più memoria.
+C'è sempre da valutare caso per caso.
