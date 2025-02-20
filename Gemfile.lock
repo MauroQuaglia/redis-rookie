@@ -3,7 +3,7 @@ GEM
   specs:
     connection_pool (2.5.0)
     gem-wrappers (1.4.0)
-    redis (5.3.0)
+    redis (5.4.0)
       redis-client (>= 0.22.0)
     redis-client (0.23.2)
       connection_pool

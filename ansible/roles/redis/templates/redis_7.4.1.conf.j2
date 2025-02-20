@@ -1047,7 +1047,7 @@ acllog-max-len 128
 # The requirepass is not compatible with aclfile option and the ACL LOAD
 # command, these will cause requirepass to be ignored.
 #
-# requirepass foobared
+requirepass {{ redis_password }}
 
 # New users are initialized with restrictive permissions by default, via the
 # equivalent of this ACL rule 'off resetkeys -@all'. Starting with Redis 6.2, it
@@ -1086,6 +1086,10 @@ acllog-max-len 128
 #
 # Please note that changing the name of commands that are logged into the
 # AOF file or transmitted to replicas may cause problems.
+
+{% for command in redis_commands %}
+rename-command {{ command.old }} {{ command.new }}
+{% endfor %}
 
 ################################### CLIENTS ####################################
 
