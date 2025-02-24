@@ -1,0 +1,13 @@
+---
+- name: "Setup swappiness (/etc/sysctl.conf)"
+  sysctl:
+    name: "vm.swappiness"
+    value: 1
+    state: "present"
+
+- name: "Setup overcommit_memory (/etc/sysctl.conf)"
+  sysctl:
+    name: "vm.overcommit_memory"
+    value: 1
+    state: "present"
+...

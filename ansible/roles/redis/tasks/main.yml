@@ -1,6 +1,9 @@
 ---
+- name: "Setup Linux"
+  import_tasks: "setup_linux.yml"
+
 - name: "Install Redis"
-  import_tasks: "install.yml"
+  import_tasks: "install_redis.yml"
 
 - name: "Generate and copy redis.conf file"
   template:
