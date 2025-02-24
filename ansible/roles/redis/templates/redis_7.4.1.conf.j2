@@ -1134,7 +1134,7 @@ rename-command {{ command.old }} {{ command.new }}
 # limit for maxmemory so that there is some free RAM on the system for replica
 # output buffers (but this is not needed if the policy is 'noeviction').
 #
-# maxmemory <bytes>
+maxmemory {{ redis_maxmemory }}
 
 # MAXMEMORY POLICY: how Redis will select what to remove when maxmemory
 # is reached. You can select one from the following behaviors:
@@ -1163,7 +1163,7 @@ rename-command {{ command.old }} {{ command.new }}
 #
 # The default is:
 #
-# maxmemory-policy noeviction
+maxmemory-policy {{ redis_maxmemory_policy }}
 
 # LRU, LFU and minimal TTL algorithms are not precise algorithms but approximated
 # algorithms (in order to save memory), so you can tune it for speed or
