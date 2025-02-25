@@ -3,8 +3,10 @@ redis_bind: "127.0.0.1 -::1"
 redis_version: "7.4.1"
 redis_protected_mode: "yes"
 redis_password: "foobar" # E' un metodo vecchio, meglio usare ACL. Ma in questo caso era solo per mettere una password all'utente di default.
-redis_maxmemory: "750mb" # Ddovrebbe essere cirac il 75% della RAM.
+redis_maxmemory: "750mb" # Ddovrebbe essere circa il 75% della RAM.
 redis_maxmemory_policy: "noeviction"
+redis_snapshotting: "yes" # Lo snapshotting sarebbe il salvataggio automatico dei dati su disco, come forma di backup.
+redis_snapshotting_filename: "dump"
 redis_commands:
   - {old: "PING", new: "PING7"}
 ...
