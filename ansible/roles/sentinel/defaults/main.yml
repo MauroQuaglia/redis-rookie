@@ -1,3 +1,5 @@
 ---
 sentinel_version: "7.4.1"
+sentinel_redis_port: "6379"
+sentinel_port: "26379"
 ...

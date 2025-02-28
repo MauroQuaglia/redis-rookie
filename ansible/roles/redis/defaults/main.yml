@@ -1,5 +1,6 @@
 ---
 redis_bind: "127.0.0.1 -::1"
+redis_port: "6379"
 redis_version: "7.4.1"
 redis_protected_mode: "yes"
 redis_password: "foobar" # E' un metodo vecchio, meglio usare ACL. Ma in questo caso era solo per mettere una password all'utente di default.

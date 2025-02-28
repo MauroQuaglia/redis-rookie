@@ -5,11 +5,11 @@
 # protected from the outside world via firewalling or other means.
 #
 # Uncomment the following line to expose Sentinel on external interfaces:
-protected-mode yes
+protected-mode no
 
 # port <sentinel-port>
 # The port that this sentinel instance will run on
-port 26379
+port {{ sentinel_port }}
 
 # By default Redis Sentinel does not run as a daemon. Use 'yes' if you need it.
 # Note that Redis will write a pid file in /var/run/redis-sentinel.pid when
@@ -103,9 +103,9 @@ dir "/var/lib/redis"
 #
 # Note: master name should not include special characters or spaces.
 # The valid charset is A-z 0-9 and the three characters ".-_".
-sentinel monitor mymaster 127.0.0.1 6379 2
+sentinel monitor mymaster 127.0.0.1 {{ sentinel_redis_port }} 1
 
-# sentinel auth-pass <master-name> <password>
+sentinel auth-pass mymaster foobar
 #
 # Set the password to use to authenticate with the master and replicas.
 # Useful if there is a password set in the Redis instances to monitor.
