@@ -19,8 +19,9 @@
       redis_bind: "0.0.0.0"
       redis_protected_mode: "no"
 
-    - role: "sentinel"
-      sentinel_version: "7.4.1"
-      sentinel_redis_port: "6379"
-      sentinel_port: "26379"
+#    # Non lo configuro se poi non lo uso ma l'ho visto funzionare correttamente, anche se uso un solo Sentinel con un solo master.
+#    - role: "sentinel"
+#      sentinel_version: "7.4.1"
+#      sentinel_redis_port: "6379"
+#      sentinel_port: "26379"
 ...

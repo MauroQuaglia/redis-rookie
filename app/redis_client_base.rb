@@ -1,7 +1,8 @@
 require('redis')
 
 class RedisClientBase
-  def initialize(sentinel: true)
+
+  def initialize(sentinel: false)
     @client = sentinel ? client_with_sentinel : client_without_sentinel
     delete_all
   end
