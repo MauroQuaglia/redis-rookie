@@ -7,7 +7,7 @@ Vagrant.configure("2") do |config|
 
   config.vm.define('vagrant-rds') do |current|
     current.vm.network('forwarded_port', id: 'ssh', guest: 22, host: 2222, auto_correct: false)
-    current.vm.network('forwarded_port', id: 'redis', guest: 6379, host: 6379, auto_correct: false)
+    current.vm.network('forwarded_port', id: 'sentinel', guest: 6379, host: 6379, auto_correct: false)
     current.vm.network('private_network', ip: '192.168.56.11')
     current.vm.hostname = 'vagrant-rds'
   end

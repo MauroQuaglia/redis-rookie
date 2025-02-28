@@ -13,6 +13,22 @@
     group: "redis"
     mode: "0640"
 
+- name: "Create /utils directory"
+  file:
+    path: "/etc/redis/utils"
+    state: "directory"
+    owner: "redis"
+    group: "redis"
+    mode: "0640"
+
+- name: "Copy create-cluster.sh file"
+  copy:
+    src: "create-cluster_{{ redis_version }}.sh"
+    dest: "/etc/redis/utils/create-cluster.sh"
+    owner: "redis"
+    group: "redis"
+    mode: "0700"
+
 - name: "Enable and restart Redis"
   service:
     name: "redis-server"

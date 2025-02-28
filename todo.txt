@@ -5,3 +5,4 @@
   * C'è anche supporto per sentinels, pipelines, ecc.
 * Guardare meglio il file di configurazione di Redis.
 * Guardare gemma redis
+* Sono a pag 183 di cap9-2
