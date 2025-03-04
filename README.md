@@ -1,3 +1,6 @@
 # redis-rookie
 
-Studio di Redis
+* Redis Standalone
+* Redis Sentinel
+* Redis Cluster
+* Gemma Ruby: redis

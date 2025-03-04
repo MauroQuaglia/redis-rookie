@@ -1,3 +1,4 @@
+# Info Varie
 * Per copiare il file di configurazione di Sentinel.
   * Sulla macchina Vagrant l'ho copiato da `/etc/redis/` in `/home/vagrant`.
   * Gli ho cambiato owner da `redis`:`redis` a `vagrant`:`vagrant`.
