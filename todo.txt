@@ -1,6 +1,2 @@
-* Sembra che se cancello l'immagine di Redis Insight dopo debba rifare la connessione al database
-  * Come se non tenesse il valore dell'environment.
-* Provare un Redis installato con Docker.
 * Guardare la gemma https://github.com/redis/redis-rb
 * Guardare meglio il file di configurazione di Redis.
-* Guardare gemma redis

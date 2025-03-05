@@ -1,6 +1,9 @@
 # https://hub.docker.com/r/redis/redisinsight
 # > docker compose up
 # http://localhost:5540/
+# Aggiungere il database 192.168.56.11:6379
+# utente: default
+# password: foobar
 
 services:
   redisinsight:
