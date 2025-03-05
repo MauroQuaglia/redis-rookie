@@ -1,2 +1,0 @@
-* Guardare la gemma https://github.com/redis/redis-rb
-* Guardare meglio il file di configurazione di Redis.
