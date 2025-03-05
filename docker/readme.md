@@ -7,8 +7,8 @@
     * Tuttavia questa versione di Redis richiede anche una libreria aggiuntiva che si chiama "redis-tool".
     * Installate con ansible su Vagrant:
       ```
-      - "redis-tools=6:7.4.1-1rl1~bullseye1"
-      - "redis-server=6:7.4.1-1rl1~bullseye1"
+      - "redis-tools=6:7.2.4-1rl1~bullseye1"
+      - "redis-server=6:7.2.4-1rl1~bullseye1"
       ``` 
     * Dopodiché sulla macchina avevo il file di configurazione della 7.4.1.
-    * Me lo sono copiato in locale con
+    * Me lo sono copiato in locale con `scp -i /home/xpuser/mauro-quaglia/redis-rookie/ansible/.vagrant/machines/vagrant-rds/virtualbox/private_key -P 2222 vagrant@localhost:/home/vagrant/redis.conf .`
