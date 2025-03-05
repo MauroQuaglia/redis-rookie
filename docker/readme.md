@@ -12,3 +12,4 @@
       ``` 
     * Dopodiché sulla macchina avevo il file di configurazione della 7.4.1.
     * Me lo sono copiato in locale con `scp -i /home/xpuser/mauro-quaglia/redis-rookie/ansible/.vagrant/machines/vagrant-rds/virtualbox/private_key -P 2222 vagrant@localhost:/home/vagrant/redis.conf .`
+* Seguite le istruzioni di `https://hub.docker.com/_/redis` per creare il Dockerfile corretto.
