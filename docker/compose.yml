@@ -2,5 +2,7 @@
 # redis-cli > CONFIG GET *
 services:
   redis7:
-   build:
-     context: "."
+    build:
+      context: "."
+    ports:
+      - "26379:6379"
