@@ -1,8 +1,20 @@
-# docker container exec -it docker-redis7-1 /bin/sh
+# docker container exec -it docker-redis7-1 /bin/sh oppure docker compose exec -it redis7 /bin/sh
 # redis-cli > CONFIG GET *
+# Per RedisInsight la stringa di connessione è: redis://default@docker-redis7-1:6379
 services:
   redis7:
     build:
       context: "."
     ports:
       - "6379:6379"
+    volumes:
+      - 'redis7-tps-data:/data'
+  redisinsight:
+    image: "redis/redisinsight:latest"
+    ports:
+      - "5540:5540"
+    volumes:
+      - "redisinsight:/data"
+volumes:
+  redis7-tps-data:
+  redisinsight:

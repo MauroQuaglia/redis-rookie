@@ -1,1 +1,2 @@
 * Il .dockerignore mi sa che non serve. Serve solo se faccio COPY . .
+* Aggiungere Redis Insight
