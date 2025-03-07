@@ -2,11 +2,11 @@ require('redis')
 
 class RedisDownloaderConfig
   def initialize
-    @client = Redis.new(host: 'docker-redis7-1', port: 26379)
+    @client = Redis.new(host: 'localhost', port: 6379)
   end
 
   def config_get_all
-    @client.config(:get, '*')
+    @client.config(:get, '*').sort_by { |key, _| key }.to_h
   end
 end
 
