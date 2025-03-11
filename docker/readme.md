@@ -27,3 +27,6 @@
 # Sidekiq
 * Dato che lo usiamo solo con Sidekiq, per la configurazione di Redis bisogna leggere: 
   * https://github.com/sidekiq/sidekiq/wiki/Using-Redis
+
+# Log
+* I log che normalmente si trovano `/var/log/redis/` vengono scritti su `STDOUT` e `STDERR` nel containerper impostazione predefinita.
