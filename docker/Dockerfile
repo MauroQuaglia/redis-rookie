@@ -1,3 +1,4 @@
+# Il .dockerignore non serve. Serve solo se faccio COPY . .
 FROM redis:7.2.4-alpine3.19
 
 COPY ./configs/custom_redis-7.2.4-v2.conf /usr/local/etc/redis/redis.conf

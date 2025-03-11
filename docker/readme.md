@@ -24,3 +24,6 @@
 * Quindi basta capire quali configurazioni vogliamo cambiare e specificare solo quelle.
   * Un po' come facciamo con il file `postgresql.auto.conf`!
 
+# Sidekiq
+* Dato che lo usiamo solo con Sidekiq, per la configurazione di Redis bisogna leggere: 
+  * https://github.com/sidekiq/sidekiq/wiki/Using-Redis
