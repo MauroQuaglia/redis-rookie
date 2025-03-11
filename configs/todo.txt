@@ -1,1 +1,0 @@
-* Verificare che stia proprio prendendo il config.
