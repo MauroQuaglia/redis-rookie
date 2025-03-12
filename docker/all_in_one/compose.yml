@@ -1,0 +1,10 @@
+services:
+  redis7:
+    image: "redis:7.2.4-alpine3.19"
+    command: "redis-server --save 3600 1 --timeout 300 --maxmemory 8GB"
+    ports:
+      - "6379:6379"
+    volumes:
+      - 'redis7-tps-data:/data'
+volumes:
+  redis7-tps-data:
